@@ -15,8 +15,8 @@
 
 extern float I_charge[Test_Number];										 //储存充电电流值    
 extern float I_discharge[Test_Number];								 //储存放电电流值    
-extern float V[Test_Number]; 													 //储存电压值
-
+extern float V_charge[Test_Number]; 									 //储存充电电压值
+extern float V_discharge[Test_Number]; 								 //储存充电电压值
 
 int main(void)
 {		
@@ -33,8 +33,8 @@ int main(void)
 	ADC3_Stop();
 	while (1)
 	{ 
-			Battery_Charge_Test();							//按键KEY1按下，充电状态开始检测,数据存放在 I_charge[]	与V[] 里面 	
-			Battery_Discharge_Test();						//按键KEY2按下，放电状态开始检测
+			Battery_Charge_Test();							//按键KEY1按下，充电状态开始检测,数据存放在 I_charge[]	与V_charge[] 里面 	
+			Battery_Discharge_Test();						//按键KEY2按下，放电状态开始检测,数据存放在 I_discharge[]	与V_discharge 里面 	
 
 	}//while(1)
 	
